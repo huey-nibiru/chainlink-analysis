@@ -39,7 +39,7 @@ def link_marines_data():
                 pass
     for i in (all_months):
         print(i)
-    with open ("/Users/Yousefmacer/Github/data_analytics/defi_capstone/chainlink/link_marine_stats.json.json", "w") as f:
+    with open (MAIN_PATH + "link_marine_stats.json", "w") as f:
         json.dump(all_months, f, indent=4)
 
 

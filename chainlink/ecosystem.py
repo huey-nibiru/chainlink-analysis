@@ -1,9 +1,11 @@
 from imports import *
 
-f1 = "/Users/Yousefmacer/Github/data_analytics/defi_capstone/link_scraping/categories.txt"
-f2 = "/Users/Yousefmacer/Github/data_analytics/defi_capstone/link_scraping/chains.txt"
-f3 = "/Users/Yousefmacer/Github/data_analytics/defi_capstone/link_scraping/products.txt"
-categories = [];chains = [];products = [];
+
+f1 = MAIN_PATH + "categories.txt"
+f2 = MAIN_PATH + "chains.txt"
+f3 = MAIN_PATH + "products.txt"
+categories, chains, products = [],[],[]
+
 for i in [f1,f2,f3]:
     with open(i, "r") as f:
         d = f.read()
@@ -17,7 +19,6 @@ for i in [f1,f2,f3]:
   
 def scrape_links(url):
     p = []
-    DRIVER_PATH = './dependencies/drivers/chromedriver'
     driver = webdriver.Chrome(DRIVER_PATH)
     driver.get(url)
     driver.maximize_window()
@@ -89,7 +90,7 @@ def scrape_ecosystem():
             bar.next()
         except:
             pass
-    with open("/Users/Yousefmacer/Github/data_analytics/defi_capstone/chainlink/link_partnerships.json", "w") as f:
+    with open(MAIN_PATH + "link_partnerships.json", "w") as f:
         json.dump(link_partnerships, f, indent=4)
     bar.finish()
     print("Process complete.")
