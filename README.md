@@ -1,7 +1,8 @@
 # Chainlink Analysis
 
-### Supporting Question
-- Is chainlink price being suppressed? Does it accurately reflect market trends?
+### Supporting Questions
+- Does chainlink price accurately reflect current market trends? 
+- Is $LINK price being suppressed?
 
 ### Guidelines
 - chainlink nodes?
