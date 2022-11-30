@@ -17,6 +17,7 @@ def link_marines_data():
         "rank":None,
         "brothers":None,
     }
+    
     month = scrape_links("https://www.chainlinkecosystem.com/ranks", 'ranks-faq-main shadow') 
     all_months = []
     for i in range(len(month)):
