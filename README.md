@@ -14,7 +14,7 @@
 - Identify trading volume 
 - Technical analysis
 - Node analysis
-- Identify partnerships
+- Identify total partnerships 
 
 
 
