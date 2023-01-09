@@ -16,7 +16,9 @@ for i in [f1,f2,f3]:
 
 
 
-  
+# Return list 'p' of all projects in the chainlink ecosystem 
+# Each element of the list contains the link of one chainlink integration
+# Each integration has the project name, status, chains, category, integrations and year
 def scrape_links(url):
     p = []
     driver = webdriver.Chrome(DRIVER_PATH)
