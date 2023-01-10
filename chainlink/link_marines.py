@@ -11,7 +11,7 @@ def scrape_links(url, div_class):
     return data
 
 
-# Creates a object for month for $LINK holders 
+# Creates a object for monthly $LINK holder stats
 # Each month object has the following fields: month, year, rank, brothers
 # Adds the object month_stat to a list all_months, and appends to json file link_marine_stats.json
 def link_marines_data():
