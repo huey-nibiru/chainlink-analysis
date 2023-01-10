@@ -3,7 +3,7 @@ import pprint, re
 system('clear')
 
 
-
+# Scrape finds each element by class and return the soup object 
 def scrape_links(url, div_class):
     req = requests.get(url)
     soup = BeautifulSoup(req.content, 'html.parser')
@@ -11,7 +11,9 @@ def scrape_links(url, div_class):
     return data
 
 
-
+# Creates a object for month for $LINK holders 
+# Each month object has the following fields: month, year, rank, brothers
+# Adds the object month_stat to a list all_months, and appends to json file link_marine_stats.json
 def link_marines_data():
     month_stat = {
         "month":None,
