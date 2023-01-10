@@ -19,7 +19,7 @@ for i in [f1,f2,f3]:
 
 
 
-# Opens the window using the webdriver, and finds each element in the body by its tag name
+# Opens the window using the webdriver, and finds each element by body tag 
 # Returns list 'e' of the current chainlink ecosystem 
 # Each element of the list contains the link of one integration/project utilizing chainlink protocols
 def scrape_links(url):

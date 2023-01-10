@@ -2,6 +2,8 @@ from imports import *
 import pprint, re
 system('clear')
 
+
+
 def scrape_links(url, div_class):
     req = requests.get(url)
     soup = BeautifulSoup(req.content, 'html.parser')
