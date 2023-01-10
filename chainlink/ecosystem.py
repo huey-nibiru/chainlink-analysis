@@ -1,6 +1,7 @@
 from imports import *
 
-
+# Three files are included, the project category, chains involved, and the chainlink products used
+# Each product is able to be sorted by each of these parameters
 f1 = MAIN_PATH + "categories.txt"
 f2 = MAIN_PATH + "chains.txt"
 f3 = MAIN_PATH + "products.txt"
@@ -15,12 +16,12 @@ for i in [f1,f2,f3]:
         if i==f3:products=d
 
 
+# Opens the window using the webdriver, and finds each element in the body by its tag name
+# Returns list 'e' of the current chainlink ecosystem 
+# Each element of the list contains the link of one integration/project utilizing chainlink protocols
 
-# Return list 'p' of all projects in the chainlink ecosystem 
-# Each element of the list contains the link of one chainlink integration
-# Each integration has the project name, status, chains, category, integrations and year
 def scrape_links(url):
-    p = []
+    e = []
     driver = webdriver.Chrome(DRIVER_PATH)
     driver.get(url)
     driver.maximize_window()
@@ -39,13 +40,14 @@ def scrape_links(url):
         for a in links:
             url = ("https://chainlinkecosystem.com" + a['href'])
             if url not in p:    
-                p.append(url)
-    return p
+                e.append(url)
+    return e
 
 
 
 
-
+# Create a struct for the project 
+# Each project has the following fields: name, status, chains, category, integrations, year
 def parse_data(partner):
     partner_struct = {
             "name":None,
