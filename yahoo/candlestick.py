@@ -8,4 +8,4 @@ btc_df = yf.Ticker("BTC-USD").history(start="2022-01-01", end="2023-01-01")
 eth_df = yf.Ticker("ETH-USD").history(start="2022-01-01", end="2023-01-01")
 
 
-mpf.plot(btc_df, type="candle")
+mpf.plot(btc_df, type="candle", volume=True)
